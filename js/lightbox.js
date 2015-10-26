@@ -6,9 +6,13 @@
 //Add overlay
 
 //Capture the click event on a link to an image
+  $("#imgGallery a").click(function(event){
+    event.preventDefault();
+    var href = $(this).attr("href");
+    console.log(href);
   //Update overlay with the image linked in the link
   //Show the overlay.
   //Get child's alt attribute and set caption
-
+  });
 //When overlay is clicked
   //Hide the overlay
