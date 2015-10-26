@@ -1,9 +1,12 @@
 // problem: poor user experience when clicking on image.
 // solution: create lightbox for lg img, keep user on page.
 
-//An image to overlay
-//A caption to overlay
+var $overlay = $("<div id="overlay"></div>");
+
 //Add overlay
+$("body").append($overlay);
+  //An image to overlay
+ //A caption to overlay
 
 //Capture the click event on a link to an image
   $("#imgGallery a").click(function(event){
