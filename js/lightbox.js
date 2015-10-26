@@ -3,6 +3,7 @@
 var $overlay = $('<div id="overlay"></div>');
 var $image = $('<img>');
 var $dismissButton = $('<button id="exit">X</button>');
+var $caption = $('<p></p>');
 
 //Add An image to overlay
 $overlay.append($image);
@@ -17,10 +18,17 @@ $dismissButton.click(function(){
   $overlay.hide(300);
 });
 
+//A caption to overlay
+$overlay.append($caption);
+
+//copies value of alt and sets to title alt.
+$('#imgGallery img').each(function(index, element){
+    var titleValue = $(element).attr('alt');
+    $(element).attr('title', titleValue);
+});
+
 //Add overlay
 $('body').append($overlay);
-
- //A caption to overlay
 
 //Capture the click event on a link to an image
   $('#imgGallery a').click(function(event){
@@ -33,6 +41,7 @@ $('body').append($overlay);
     $overlay.show();
 
     //Get child's alt attribute and set caption
-
+    var captionText = $(this).children('img').attr('title');
+    $caption.text(captionText);
   });
 

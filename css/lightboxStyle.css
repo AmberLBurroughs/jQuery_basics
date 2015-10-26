@@ -56,8 +56,12 @@ a {
   position: absolute;
   z-index: 9999;
 }
-#exit:hover{
-  opacity: 1;
+  #exit:hover{
+    opacity: 1;
+  }
+
+#overlay p {
+  color: white;
 }
 
 /*  MEDIA QUERY */
