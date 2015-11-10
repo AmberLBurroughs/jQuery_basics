@@ -10,6 +10,11 @@ $("#menu a ").each(function(){
   // create an option
   var $option = $("<option></option>");
 
+  // selected option depending on current page
+    if($anchor.parent().hasClass("selected")){
+      $option.prop("selected", true);
+    };
+
   // option value is the href
   $option.val($anchor.attr("href"));
   // options text is txt of link
@@ -26,7 +31,3 @@ $button.click(function(){
   //go to select location on click
   window.location = $select.val();
 });
-
-// modify css to hide links & show select with button (sml screen)
-  // hides select & button (LG screen)
-// selected option depending on current page

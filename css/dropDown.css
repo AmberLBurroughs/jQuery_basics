@@ -63,4 +63,21 @@ p {
   text-align: center;
   color: #777;
 }
-/** Start Coding Here **/
+
+
+/*/ modify css to hide links & show select with button (sml screen)
+  // hides select & button (LG screen)*/
+
+
+
+@media (min-width: 320px)and (max-width: 568px){
+  #menu ul{
+    display: none;
+  }
+}
+
+@media (min-width: 568px){
+  #menu select, #menu button{
+    display: none;
+  }
+}
