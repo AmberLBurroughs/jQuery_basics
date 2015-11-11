@@ -35,17 +35,20 @@ function passwordEvent(){
 
 function confirmPasswordEvent(){
   // test if valid (match w/ PW input)
+  var $hint1 = $confirmPassword.next();
+  var $hint2 = $confirmPassword.next().next();
+
   if (arePasswordsMatching()){
     // if true hide hints
-    $confirmPassword.next().hide();
-    $confirmPassword.next().next().hide();
+    $hint1.hide();
+    $hint2.hide();
   } else if ($confirmPassword.val() === ""){
     // else show hints
-    $confirmPassword.next().show();
-    $confirmPassword.next().next().hide();
+    $hint1.show();
+    $hint2.hide();
   } else {
-    $confirmPassword.next().hide();
-    $confirmPassword.next().next().show();
+    $hint1.hide();
+    $hint2.show();
   }
 }
 
