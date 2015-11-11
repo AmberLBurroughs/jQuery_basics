@@ -24,10 +24,10 @@ function canSubmit(){
 
 function passwordEvent(){
    // test if valid
-  if(isPasswordValid()) {
+  if (isPasswordValid()) {
      // if true hide hints
     $password.next().hide();
-  } else{
+  } else {
      // else show hints
     $password.next().show();
   }
@@ -35,12 +35,17 @@ function passwordEvent(){
 
 function confirmPasswordEvent(){
   // test if valid (match w/ PW input)
-  if(arePasswordsMatching()){
+  if (arePasswordsMatching()){
     // if true hide hints
     $confirmPassword.next().hide();
-  } else{
+    $confirmPassword.next().next().hide();
+  } else if ($confirmPassword.val() === ""){
     // else show hints
     $confirmPassword.next().show();
+    $confirmPassword.next().next().hide();
+  } else {
+    $confirmPassword.next().hide();
+    $confirmPassword.next().next().show();
   }
 }
 
@@ -49,7 +54,7 @@ function enableSubmitEvent() {
 }
 
 function usernameEvent() {
-  if(isUsernamePresent()) {
+  if (isUsernamePresent()) {
     $username.next().hide();
   } else {
     $username.next().show();
