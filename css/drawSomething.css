@@ -138,3 +138,16 @@ button {
   padding: 5px 10px;
   width: 325px;
 }
+
+@media (min-width: 320px)and (max-width: 568px){
+  canvas {
+   width: 95%;
+   margin: auto;
+
+  }
+  .controls {
+    text-align: center;
+    margin: auto;
+    width: auto !important;
+  }
+}
